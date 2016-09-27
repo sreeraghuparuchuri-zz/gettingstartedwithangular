@@ -28,15 +28,15 @@
         <th>...</th>
       </tr>
       <tr>
-        <td>Jill</td>
-        <td>Smith</td>
-        <td>50</td>
+        <td>F1</td>
+        <td>L1</td>
+        <td>A1</td>
         <td>... </td>
       </tr>
       <tr>
-        <td>Eve</td>
-        <td>Jackson</td>
-        <td>94</td>
+        <td>F2</td>
+        <td>L2</td>
+        <td>A2</td>
         <td>... </td>
       </tr>
     </table>
@@ -44,10 +44,10 @@
 
   <div ng-controller="gtgStdCtrl">
     <div>
-    <button type="button" class="btn btn-default" ng-click='Addnew()'> Add New </button>
+    <button type="button" class="btn btn-default" ng-click="Addnew()"> Add New </button>
+    <!-- Show HTML: <input type="checkbox" ng-model="myVar"> -->
   </div>
-
-  <div class="table-responsive" id="AddNewTable">
+  <div class="table-responsive" id="AddNewTable" ng-show="showMe">
     <table class="table">
       <tr>
         <th>Firstname</th>
@@ -63,8 +63,14 @@
       </tr>
     </table>
   </div>
+  <div>
+    <button type="button" class="btn btn-default" ng-click="newFunc()"> Test </button>
+    <!-- Show HTML: <input type="checkbox" ng-model="myVar"> -->
+  </div>
 
   </div>
+  
+  <!--Show HTML: <input type="checkbox" ng-model="myVar">-->
 
 </body>
 
