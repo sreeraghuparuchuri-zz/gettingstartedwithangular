@@ -44,34 +44,28 @@
 
   <div ng-controller="gtgStdCtrl">
     <div>
-    <button type="button" class="btn btn-default" ng-click="Addnew()"> Add New </button>
-    <!-- Show HTML: <input type="checkbox" ng-model="myVar"> -->
+      <button type="button" class="btn btn-default" ng-click="addNew()"> Add New </button>
+    </div>
+    <div class="table-responsive" id="AddNewTable" ng-show="showMe">
+      <table class="table">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+          <th>...</th>
+        </tr>
+        <tr>
+          <td><input type="text" name="fname" placeholder="Enter First Name.."></td>
+          <td><input type="text" name="lname" placeholder="Enter Last Name.."></td>
+          <td><input type="text" name="age" placeholder="Enter Age"></td>
+          <td>... </td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <button type="button" class="btn btn-default" ng-click="submitAddNew()"> Submit </button>
+    </div>
   </div>
-  <div class="table-responsive" id="AddNewTable" ng-show="showMe">
-    <table class="table">
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Age</th>
-        <th>...</th>
-      </tr>
-      <tr>
-        <td><input type="text" name="fname" placeholder="Enter First Name.."></td>
-        <td><input type="text" name="lname" placeholder="Enter Last Name.."></td>
-        <td><input type="text" name="age" placeholder="Enter Age"></td>
-        <td>... </td>
-      </tr>
-    </table>
-  </div>
-  <div>
-    <button type="button" class="btn btn-default" ng-click="newFunc()"> Test </button>
-    <!-- Show HTML: <input type="checkbox" ng-model="myVar"> -->
-  </div>
-
-  </div>
-  
-  <!--Show HTML: <input type="checkbox" ng-model="myVar">-->
-
 </body>
 
 </html>
