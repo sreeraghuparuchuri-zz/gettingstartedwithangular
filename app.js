@@ -1,6 +1,6 @@
 var app = angular.module("gettingStarted", []);
 
-app.controller("gtgStdCtrl", function ($scope) {
+app.controller("gtgStdCtrl", function ($scope, $http) {
     console.log($scope);
     $scope.showMe = false;
     $scope.addNew = function () {
@@ -18,6 +18,23 @@ app.controller("gtgStdCtrl", function ($scope) {
         console.log(lName);
         console.log(age);
 
+        var req = {
+            method: "POST",
+            url: "http://localhost:8080/com.raghu.webservice.restful/gettingstarted/addnew",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: {
+                FNAME: fName,
+                LNAME: lName,
+                AGE: age
+            }
+        }
+
+        $http(req).then(function (response) {
+            console.log(response);
+
+        });
         //$scope.showMe = false;
 
     }
